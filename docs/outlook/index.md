@@ -1,6 +1,6 @@
 # Outlook
 
-this is WIP.
+this is a WIP.
 
 ## Future Directions
 

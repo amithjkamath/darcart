@@ -13,7 +13,7 @@ This is a WIP (Work-In-Progress): this message will be removed once sufficient p
 * Introduction to AI
 * AI Applied to the Radiotherapy Workflow
 
-## Part I: Dosimetric Awareness of Radiation Oncology Professionals
+## [Part I: Dosimetric Awareness of Radiation Oncology Professionals](partone/index.md)
 
 ### 3: Journal Submission, TBD
 
@@ -25,7 +25,7 @@ This work was presented as an [oral talk](https://proceedings.mlr.press/v250/kam
 
 This work was presented as an [oral talk](https://link.springer.com/chapter/10.1007/978-3-031-73376-5_21) at the [CaPTion Workshop at MICCAI 2024](https://caption-workshop.github.io/#Workshop%20sessions).
 
-## Part II: Sensitivity of Dose Prediction Models
+## [Part II: Sensitivity of Dose Prediction Models]((parttwo/index.md))
 
 ### 6: Deep-learning-based dose predictor for glioblastoma–assessing the sensitivity and robustness for dose awareness in contouring
 
@@ -39,13 +39,13 @@ This work was presented as a [poster](https://ieeexplore.ieee.org/stamp/stamp.js
 
 This work was presented as an [oral talk](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10341062) at [EMBC 2023](https://embc.embs.org/2023/). This work won the [2nd best student paper award](https://embc.embs.org/2023/students/paper-competition/finalists/) at this conference.
 
-## Part III: Robustness of Segmentation Models 
+## [Part III: Robustness of Segmentation Models](partthree/index.md)
 
 ### 9: Journal Submission, TBD
 
 ### 10: Do We Really Need that Skip-Connection? Understanding Its Interplay with Task Complexity
 
-This work was presented as a poster at [MICCAI 2023](https://link.springer.com/chapter/10.1007/978-3-031-43901-8_29).
+This work was presented as a [poster](https://link.springer.com/chapter/10.1007/978-3-031-43901-8_29) at [MICCAI 2023](https://conferences.miccai.org/2023/papers/).
 
 ### 11: How do 3D image segmentation networks behave across the context versus foreground ratio trade-off?
 
@@ -67,5 +67,8 @@ This work was presented as a [poster](https://www.cse.cuhk.edu.hk/~qdou/public/m
 :caption: Contents
 intro/index
 background/index
+partone/index
+parttwo/index
+partthree/index
 conclusions/index
 outlook/index

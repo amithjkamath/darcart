@@ -1,6 +1,6 @@
 # Introduction
 
-this is a WIP.
+this is WIP.
 
 ## Clinical Background
 

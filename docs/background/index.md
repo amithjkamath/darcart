@@ -1,6 +1,6 @@
 # Background
 
-this is WIP.
+this is a WIP.
 
 ## Introduction to Artificial Intelligence (AI)
 
