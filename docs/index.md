@@ -1,9 +1,6 @@
-Techniques for Automation in Radiotherapy Applications
-===================================
+# Dose-Aware and Robust Contour Assessment for RT (DARCART)
 
-This is a WIP (Work-In-Progress): this message will be removed once sufficient progress has been made. 
-
-TARA stands for Techniques for Automation in Radiotherapy Applications is a set of notes on AI in Radiation Oncology.
+This is a WIP (Work-In-Progress): this message will be removed once sufficient progress has been made.
 
 ## [1: Introduction](intro/index.md)
 
