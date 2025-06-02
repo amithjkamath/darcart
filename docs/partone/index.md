@@ -18,6 +18,6 @@ This work was presented as an [oral talk](https://link.springer.com/chapter/10.1
 ```{toctree}
 :maxdepth: 2
 :caption: Contents
-partone/chapter3
-partone/chapter4
-partone/chapter5
+chapter3
+chapter4
+chapter5
