@@ -1,9 +1,9 @@
-# Conclusions
+# 12. Conclusions
 
 this is WIP.
 
-## Dosimetric Awareness Of Clinicians
+## 12.1 Dosimetric Awareness Of Clinicians
 
-## Sensitivity of Dose Prediction Models
+## 12.2 Sensitivity of Dose Prediction Models
 
-## Robustness of Segmentation Models
+## 12.3 Robustness of Segmentation Models

@@ -1,8 +1,8 @@
-# Outlook
+# 13. Outlook
 
 this is a WIP.
 
-## Future Directions
+## 13.1 Future Directions
 
 ### Addressing Clinical Needs
 
@@ -10,7 +10,7 @@ this is a WIP.
 
 ### Building Useful Tools for Clinics
 
-## Radiotherapy + AI in 2040?
+## 13.2 Radiotherapy + AI in 2040?
 
 ### Impact on Clinician Workflows
 

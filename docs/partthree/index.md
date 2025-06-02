@@ -2,6 +2,8 @@
 
 this is a WIP.
 
+## 9: Journal Submission, TBD
+
 ## 10: Do We Really Need that Skip-Connection? Understanding Its Interplay with Task Complexity
 
 This work was presented as a [poster](https://link.springer.com/chapter/10.1007/978-3-031-43901-8_29) at [MICCAI 2023](https://conferences.miccai.org/2023/papers/).

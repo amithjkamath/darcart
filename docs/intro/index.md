@@ -1,8 +1,8 @@
-# Introduction
+# 1. Introduction
 
 this is a WIP.
 
-## Clinical Background
+## 1.1 Clinical Background
 
 ### Glioblastoma and the Current Standard-Of-Care
 
@@ -10,7 +10,7 @@ this is a WIP.
 
 ### Radiotherapy: an Essential Component
 
-## Workflow Challenges in Treatment Planning
+## 1.2 Workflow Challenges in Treatment Planning
 
 ### Variability in Clinical Contouring Practice
 
@@ -18,7 +18,7 @@ this is a WIP.
 
 ### Lack of Robustness in Auto-contouring Models
 
-## Unmet Clinical Need for (Auto-)Contour Quality Assurance
+## 1.3 Unmet Clinical Need for (Auto-)Contour Quality Assurance
 
 ### Approaches to Contour Quality Assurance
 
@@ -26,4 +26,4 @@ this is a WIP.
 
 ### Motivating Automation in Quality Assurance
 
-## Research Questions and Contributions
+## 1.4 Research Questions and Contributions

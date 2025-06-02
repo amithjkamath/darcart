@@ -1,8 +1,8 @@
-# Background
+# 2. Background
 
 this is a WIP.
 
-## Introduction to Artificial Intelligence (AI)
+## 2.1 Introduction to Artificial Intelligence (AI)
 
 ### Learning From Data
 
@@ -11,7 +11,7 @@ this is a WIP.
 ### Performance Evaluations
 
 
-## AI Applied to the Radiotherapy Workflow
+## 2.2 AI Applied to the Radiotherapy Workflow
 
 ### The Treatment Planning Workflow
 
