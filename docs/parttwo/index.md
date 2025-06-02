@@ -1,29 +1,20 @@
-# Introduction
+# Sensitivity of Dose Prediction Models
 
-this is WIP.
+## 6: Deep-learning-based dose predictor for glioblastoma–assessing the sensitivity and robustness for dose awareness in contouring
 
-## Clinical Background
+This work was [published]((https://www.mdpi.com/2072-6694/15/17/4226)) in the journal [Cancers](https://www.mdpi.com/journal/cancers) with impact factor 4.5.
 
-### Glioblastoma and the Current Standard-Of-Care
+## 7: How sensitive are Deep Learning based Radiotherapy Dose Prediction Models to Variability in Organs at Risk Segmentation?
 
-### Dismal Prognosis and its Causes
+This work was presented as a [poster](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10230559) at [ISBI 2023](https://biomedicalimaging.org/2023/).
 
-### Radiotherapy: an Essential Component
+## 8: ASTRA: Atomic Surface Transformations for Radiotherapy Quality Assurance
 
-## Workflow Challenges in Treatment Planning
+This work was presented as an [oral talk](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10341062) at [EMBC 2023](https://embc.embs.org/2023/). This work won the [2nd best student paper award](https://embc.embs.org/2023/students/paper-competition/finalists/) at this conference.
 
-### Variability in Clinical Contouring Practice
-
-### Time-consuming Plan Optimization Process
-
-### Lack of Robustness in Auto-contouring Models
-
-## Unmet Clinical Need for (Auto-)Contour Quality Assurance
-
-### Approaches to Contour Quality Assurance
-
-### Challenges in Current Workflow
-
-### Motivating Automation in Quality Assurance
-
-## Research Questions and Contributions
+```{toctree}
+:maxdepth: 2
+:caption: Contents
+chapter6
+chapter7
+chapter8

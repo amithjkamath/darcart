@@ -1,29 +1,18 @@
-# Introduction
+# Robustness of Segmentation Models
 
-this is WIP.
+this is a WIP.
 
-## Clinical Background
+## 10: Do We Really Need that Skip-Connection? Understanding Its Interplay with Task Complexity
 
-### Glioblastoma and the Current Standard-Of-Care
+This work was presented as a [poster](https://link.springer.com/chapter/10.1007/978-3-031-43901-8_29) at [MICCAI 2023](https://conferences.miccai.org/2023/papers/).
 
-### Dismal Prognosis and its Causes
+## 11: How do 3D image segmentation networks behave across the context versus foreground ratio trade-off?
 
-### Radiotherapy: an Essential Component
+This work was presented as a [poster](https://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/72.pdf) at [Medical Imaging meets NeurIPS 2022](https://sites.google.com/view/med-neurips-2022/home).
 
-## Workflow Challenges in Treatment Planning
-
-### Variability in Clinical Contouring Practice
-
-### Time-consuming Plan Optimization Process
-
-### Lack of Robustness in Auto-contouring Models
-
-## Unmet Clinical Need for (Auto-)Contour Quality Assurance
-
-### Approaches to Contour Quality Assurance
-
-### Challenges in Current Workflow
-
-### Motivating Automation in Quality Assurance
-
-## Research Questions and Contributions
+```{toctree}
+:maxdepth: 2
+:caption: Contents
+chapter9
+chapter10
+chapter11
