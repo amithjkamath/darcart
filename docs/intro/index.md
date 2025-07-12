@@ -5,7 +5,7 @@
 — Carl Sagan, in Cosmos (Chapter 12), 1980.
 
 
-This chapter starts with the [clinical background](#1.1-Clinical-Background), followed by the challenges in the treatment process in [workflow challenges](#1.2-Workflow-Challenges). Next, it discusses the [unmet clinical needs](#1.3-Unmet-Clinical-Needs), and ends with the research [hypothesis and the structure of the thesis](#-1.4-Hypothesis,-Contributions,-and-Structure). New terms are explained in Chapter \ref{ChapterBackground}, which readers may skip to go directly to the clinical needs in Part \ref{validationPart}, technical contributions in Part \ref{technicalPart}, and proof-of-concept experiments in Part \ref{pocPart}. A reading guide is shown in Figure \ref{fig:1.4.2structureOfThesis}.
+This chapter starts with the [clinical background](#clinical-background), followed by the challenges in the treatment process in [workflow challenges](#workflow-challenges). Next, it discusses the [unmet clinical needs](#unmet-clinical-needs), and ends with the research [hypothesis and the structure of the thesis](#hypothesis-contributions-and-structure). New terms are explained in Chapter \ref{ChapterBackground}, which readers may skip to go directly to the clinical needs in Part \ref{validationPart}, technical contributions in Part \ref{technicalPart}, and proof-of-concept experiments in Part \ref{pocPart}. A reading guide is shown in Figure \ref{fig:1.4.2structureOfThesis}.
 
 ## 1.1 Clinical Background
 
