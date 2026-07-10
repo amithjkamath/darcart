@@ -19,11 +19,20 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx_book_theme",
     "myst_parser",
+    "sphinxcontrib.bibtex",
 ]
 
 myst_enable_extensions = [
     "dollarmath",  # $...$ and $$...$$ math in Markdown
 ]
+
+# -- Bibliography (sphinxcontrib-bibtex)
+bibtex_bibfiles = ["references.bib"]
+bibtex_reference_style = "author_year"
+
+# Some source .bib entries are missing optional fields (e.g. booktitle); don't
+# turn those into build warnings for the website.
+suppress_warnings = ["bibtex.missing_field"]
 
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3/", None),
