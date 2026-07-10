@@ -2,7 +2,9 @@
 
 this is a WIP.
 
-## 9: Journal Submission, TBD
+## 9: The impact of U-Net architecture choices and skip connections on the robustness of segmentation across texture variations
+
+This work was [published](https://doi.org/10.1016/j.compbiomed.2025.111056) in [Computers in Biology and Medicine](https://www.sciencedirect.com/journal/computers-in-biology-and-medicine) (CiBM). More details about this work is included in [Chapter 9](chapter9.md).
 
 ## 10: Do We Really Need that Skip-Connection? Understanding Its Interplay with Task Complexity
 

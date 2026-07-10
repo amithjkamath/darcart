@@ -2,6 +2,8 @@
 
 This work was [published](https://www.mdpi.com/2072-6694/15/17/4226) in the journal [Cancers](https://www.mdpi.com/journal/cancers) (impact factor 4.5).
 
+**Read the paper:** [Publisher (Cancers / MDPI)](https://doi.org/10.3390/cancers15174226) · [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=clej42kAAAAJ&citation_for_view=clej42kAAAAJ:vV6vV6tmYwMC)
+
 External beam radiation therapy requires a sophisticated and laborious planning procedure. To improve the efficiency and quality of this procedure, machine-learning models that predict these dose distributions were introduced. The most recent dose prediction models are based on deep-learning architectures called 3D U-Nets that give good approximations of the dose in 3D almost instantly. Our purpose was to train such a 3D dose prediction model for glioblastoma VMAT treatment and test its robustness and sensitivity for the purpose of quality assurance of automatic contouring.
 
 From a cohort of 125 glioblastoma (GBM) patients, VMAT plans were created according to a clinical protocol. The initial model was trained on a cascaded 3D U-Net. A total of 60 cases were used for training, 15 for validation and 20 for testing. The prediction model was tested for sensitivity to dose changes when subject to realistic contour variations. Additionally, the model was tested for robustness by exposing it to a worst-case test set containing out-of-distribution cases.

@@ -1,6 +1,6 @@
 # Comparing the Performance of Radiation Oncologists versus a Deep Learning Dose Predictor to Estimate Dosimetric Impact of Segmentation Variations for Radiotherapy
 
-This is a WIP (Work-In-Progress): this message will be removed once sufficient progress has been made.
+**Read the paper:** [Publisher (PMLR / MIDL 2024)](https://proceedings.mlr.press/v250/kamath24a.html) · [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=clej42kAAAAJ&citation_for_view=clej42kAAAAJ:2P1L_qKh6hAC)
 
 [![Oral talk at MIDL 2024:](https://img.youtube.com/vi/Co9yUIAw6H0/0.jpg)](https://youtu.be/Co9yUIAw6H0?t=3587)
 

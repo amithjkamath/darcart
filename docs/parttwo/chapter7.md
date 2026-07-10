@@ -1,6 +1,6 @@
 # How sensitive are Deep Learning based Radiotherapy Dose Prediction Models to Variability in Organs at Risk Segmentation?
 
-This is a WIP (Work-In-Progress): this message will be removed once sufficient progress has been made. 
+**Read the paper:** [Publisher (IEEE ISBI 2023)](https://doi.org/10.1109/ISBI53787.2023.10230559) · [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=clej42kAAAAJ&citation_for_view=clej42kAAAAJ:hMod-77fHWUC)
 
 [![2 minute video abstract](https://img.youtube.com/vi/Lz5-n4lA3QM/0.jpg)](https://www.youtube.com/watch?v=Lz5-n4lA3QM)
 

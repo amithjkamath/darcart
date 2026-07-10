@@ -10,6 +10,12 @@ This chapter revisits the hypothesis and research questions introduced in Chapte
 
 > *Artificial Intelligence (AI)-based systems can standardize and automate fast and reliable dosimetric contour Quality Assurance (QA) in Radiotherapy (RT) planning.* 
 
+```{figure} images/12.1_hypothesis_three_pillars.png
+:width: 100%
+
+The three pillars on which the experiments to test the hypothesis of this thesis stands: A: validating the clinical need, B: investigations into the reliability and speed of technical solutions, and finally C: proof-of-concepts of novel clinical applications. Sub-questions within each of these pillars are listed on the right.
+```
+
 Chapters 3 to 5 provide strong support for the central hypothesis and advance the field by aiming to *improve the precision, efficiency, and reliability of RT using advanced AI tools*. Through the integration of **dose-aware QA, predictive dosimetry, and robust model design**, this work lays the foundation for more efficient RT workflows, with the potential to enhance patient outcomes.
 
 The overarching impact of these results can be summarized into:

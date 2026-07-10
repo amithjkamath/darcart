@@ -16,8 +16,14 @@ GBMs are divided into two main types: primary (de novo) and secondary (progressi
 
 Managing GBM in clinical practice is difficult due to its complex nature. GBM shows significant differences within and between tumours at the genetic, molecular, and cellular levels. These tumours have varied genetic mutations and molecular profiles, which result in different physical traits and responses to treatment. This variation affects imaging features, such as differences in contrast enhancement, oedema, and necrosis seen on Magnetic Resonance Imaging (MRI) scans. These differences make it hard to monitor tumour behaviour and growth patterns, which impacts treatment outcomes and complicates the development of effective therapies.
 
+```{figure} images/1.1.1_management_of_GBM.png
+:width: 100%
+
+Standard-of-care treatment for GBM relies on identification of tumour boundaries, maximally resecting it, and then performing post-operative Radiotherapy (RT) to target residual microscopic extensions of the tumour cells at the boundaries of the resection area.
+```
+
 **Standard-Of-Care:**
-The standard treatment for GBM, known as the "Stupp protocol", involves a combination of methods. It includes maximal safe surgical removal of the tumour, followed by Radiotherapy (RT) and chemotherapy with temozolomide. This approach aims to extend survival and enhance the quality of life for patients with GBM. The treatment consists of the following components:
+The standard treatment for GBM, known as the "Stupp protocol", involves a combination of methods. It includes maximal safe surgical removal of the tumour, followed by RT and chemotherapy with temozolomide. This approach aims to extend survival and enhance the quality of life for patients with GBM. The treatment consists of the following components:
 
 **Surgical Resection** is the first and most important step in treating GBM. The main goals are to collect tissue for diagnosis and to reduce the tumour size while protecting brain function. Research shows that removing more of the tumour improves overall survival and delays disease progression. Advanced tools, such as intraoperative MRI, neuro-navigation systems, and fluorescence-guided surgery with 5-Aminolevulinic Acid (5-ALA), help surgeons achieve the maximum safe removal of the tumour. However, complete removal is often not possible because the tumour spreads into surrounding brain tissue.
 
@@ -59,6 +65,12 @@ Current imaging modalities, such as MRI and Positron Emission Tomography (PET), 
 
 The foundation of effective radiation therapy is meticulous treatment planning. This section addresses two primary challenges in this process, which form the motivation of the research objectives explored throughout this thesis. Treatment planning commences with the acquisition of medical images, such as Computed Tomography (CT), PET, and MRI, capturing the patient’s anatomy. These images form the backbone for contouring or delineation, where TV, encompassing the tumour and areas at risk for microscopic disease, and Organ at Risk (OAR) are carefully outlined.
 
+```{figure} images/1.2_contouring_guidelines.png
+:width: 100%
+
+Typical situation in contouring, where the OARs like the eyes are delineated. Zoomed in section (in red) on the right shows the guidelines for TVs, indicating typical extensions of the GTV to form the CTV and then the Planning Target Volume (PTV).
+```
+
 Manual contouring is typically performed by radiation oncologists or dosimetrists using specialized software to delineate structures slice-by-slice on medical images. This task demands extensive anatomical knowledge, clinical expertise, and careful interpretation of imaging features. The resulting contours guide medical physicists in developing treatment plans that deliver the prescribed radiation dose to the TV while minimizing exposure to healthy OAR tissues. Accurate contouring is critical, as it directly impacts treatment outcomes. Errors in contouring can result in geographic miss of the TV, leading to under-dosing of the tumour, or excessive irradiation of healthy OAR tissues, causing toxicity. Despite standardized guidelines and protocols, manual contouring remains heavily reliant on human judgment, leading to considerable inter- and intra-observer variability, which poses a significant challenge in RT planning. elaborates on these challenges and discusses current advancements in automation to address them.
 
 The subsequent phase of treatment planning employs advanced techniques such as IMRT and Volumetric Modulated Arc Therapy (VMAT), which involve a highly iterative process heavily reliant on manual input. Treatment planners undertake multiple trial-and-error iterations to balance the competing goals of effective tumour control and the preservation of healthy tissue. This process requires repeated adjustments to planning parameters, dose constraints, and optimization objectives until a clinically acceptable plan is achieved. provides a detailed examination of the challenges associated with this step, which leads to the core problem statement of this thesis, further discussed.
@@ -66,6 +78,12 @@ The subsequent phase of treatment planning employs advanced techniques such as I
 ### Variability in Contouring Practice
 
 Manual contouring in RT treatment planning is prone to significant variability, which presents in two main forms: *inter-observer variability*, arising from differences among clinicians, and *intra-observer variability*, stemming from inconsistencies in repeated contouring by the same clinician. This issue is substantial, as inter-observer variability in TV contouring can exceed errors in other stages of the treatment planning and delivery process. Such variability may introduce systematic errors in dose delivery, potentially compromising local disease control. The factors contributing to contour variability.
+
+```{figure} images/1.2.1_causes_for_contour_variability.png
+:width: 100%
+
+The various causes of contour variability are described in this iceberg representation. Right half of the figure represents an example of contouring variation (green: consistent, red: deviation) between three expert radiation oncologists for the brainstem contour, overlaid on the T1c image data, used to determine the boundaries.
+```
 
 **Sources of variability:** The causes of contour variability in RT treatment planning are complex and diverse. A primary factor is the *subjective interpretation* of anatomical boundaries, particularly in regions with limited tissue contrast. This challenge is pronounced in tumours where soft tissue boundaries are obscured by motion or poor contrast with adjacent OARs. For instance, studies on pancreatic tumours have demonstrated significant discrepancies, with ratios of the largest to smallest delineated GTV within the same patient reaching as high as 6.8.
 
@@ -86,6 +104,12 @@ AI approaches have demonstrated significant time efficiency, reducing total cont
 The manual method used for treatment planning has several important limitations. One of the main issues is that it is *highly time-intensive*, often requiring planners to spend many hours or even several days on a single patient case. This challenge is even greater in cases involving complex areas of the body, such as head and neck cancer. In these situations, planners must consider multiple target dose levels and many nearby OARs, which makes the process especially difficult and time-consuming.
 
 The quality of a treatment plan depends greatly on the *expertise and experience of the planner*. Creating an effective plan requires a deep understanding of what the Treatment Planning System (TPS) can and cannot do, along with the ability to estimate what kind of dose distribution is realistic for each patient. Because this process relies so much on human judgement, there can be a lot of variation in the quality of plans, even among planners working in the same clinic. Treatment planning also involves *multiple stakeholders*, such as radiation oncologists, medical physicists, and dosimetrists. Coordinating between these professionals adds complexity to the workflow. For example, treatment plans often go through several rounds of review and revision based on feedback from oncologists, which can take extra time. This teamwork, although essential, can lead to delays, especially in urgent cases where time is limited.
+
+```{figure} images/1.2.2_time_consuming.png
+:width: 100%
+
+Why is the current workflow of treatment planning time consuming? Here are three common factors that lead to excessive delays in generating acceptable treatment plans.
+```
 
 For complex treatment sites, such as head and neck cancer, the planning process is particularly challenging due to the non-convex geometry of TVs and their close proximity to critical structures. Advanced techniques, such as IMRT, enable highly conformal dose distributions but require significantly more complex and time-intensive planning. The manual and iterative nature of treatment planning further reduces clinical efficiency and may affect treatment outcomes. Due to time constraints in clinical practice, compromises are sometimes necessary, which can lead to suboptimal plans being used in treatment. This underscores the conflict between achieving high-quality plans and maintaining efficiency in demanding clinical settings.
 
@@ -125,7 +149,13 @@ The challenges listed in the previous section demonstrate the need for contour Q
 
 QA in general encompasses all procedures that ensure consistent and safe delivery of prescribed radiation doses to TVs while minimizing exposure to normal tissues and monitoring patient outcomes. This comprehensive process requires cooperation across all staff groups as the quality activities are interdependent throughout the RT workflow. Contour assessment can be conducted both *visually and quantitatively*. While visual inspection remains the most common approach, it is time-consuming and subjective. QA in RT contouring encompasses a range of methods and approaches, like shown in Figure..
 
-**Peer Review:** is a formal review by another expert of the delineated contours used to produce a RT plan, has become a critical mechanism for quality improvement. This process of traditional "chart rounds" involving contour review, radiation dose prescription scrutiny, and treatment plan evaluation has demonstrated significant clinical impact, with studies showing that peer review leads to changes in approximately one in nine radiation plans. Weekly teleconferences with radiation oncology specialists for detailed target and OAR review prior to treatment plan creation, with changes classified as "major" (modifications to high-dose Planning Target Volume (PTV) or prescription) or "minor" (modifications to intermediate/low-dose PTV or OARs). From a survey among 115 radiation oncologists in the US, 44% reported performing a contour-specific peer review in their practice. Furthermore, 72% of these respondents reported that contouring-related questions arise in at least half of cases in routine patient care. Prospective contour and plan review with radiation oncologists and site specialists, along with secondary QA contour checks performed by trained dosimetrists or medical physicists during treatment has been reported. Weekly contouring QA meetings where radiation oncologist contouring is peer reviewed prior to dosimetric planning, have served as both quality control and educational forums for trainees.
+```{figure} images/1.3.1_current_methods.png
+:width: 100%
+
+Current methods of contour QA spans the complexity spectrum from manual peer reviews and guideline-based adherence all the way up to machine learning methods. Figure generated using napkin.ai
+```
+
+**Peer Review:** is a formal review by another expert of the delineated contours used to produce a RT plan, has become a critical mechanism for quality improvement. This process of traditional "chart rounds" involving contour review, radiation dose prescription scrutiny, and treatment plan evaluation has demonstrated significant clinical impact, with studies showing that peer review leads to changes in approximately one in nine radiation plans. Weekly teleconferences with radiation oncology specialists for detailed target and OAR review prior to treatment plan creation, with changes classified as "major" (modifications to high-dose PTV or prescription) or "minor" (modifications to intermediate/low-dose PTV or OARs). From a survey among 115 radiation oncologists in the US, 44% reported performing a contour-specific peer review in their practice. Furthermore, 72% of these respondents reported that contouring-related questions arise in at least half of cases in routine patient care. Prospective contour and plan review with radiation oncologists and site specialists, along with secondary QA contour checks performed by trained dosimetrists or medical physicists during treatment has been reported. Weekly contouring QA meetings where radiation oncologist contouring is peer reviewed prior to dosimetric planning, have served as both quality control and educational forums for trainees.
 
 **Standardization Approaches:** Consensus contouring guidelines and atlases have been used to reduce TV delineation variability. A survey indicated that 75% of radiation oncologists first consulted cooperative group guidelines and contouring atlases (e.g., RadioTherapy Oncology Group (RTOG)/NRG Oncology (NRG)) when contouring questions arose. Institutional, national, or international protocols have also been shown to reduce intra- and inter-observer variation in TV delineation.
 
@@ -140,6 +170,12 @@ The *dosimetric impact of contouring errors* is particularly significant with ad
 Automated QUality Assurance (AQUA) systems have emerged as critical tools for RT, offering methods to systematically detect contouring errors that may impact treatment outcomes. These systems employ various approaches to evaluate contour quality without requiring extensive manual review. Machine learning-based error detection methods extract geometric features of OARs and apply classification algorithms to identify contours that deviate from expected parameters. Image feature-based conditional random forest algorithms approaches have been developed for different anatomical sites, with researchers using image features for thoracic structures, principal component analysis for pelvic structures, and surface-based metrics for female pelvis contours tolerances of 1-3 mm for detecting contouring errors with accuracy higher than 0.9 for most targets and critical structures have been reported to be used for automating these checks.
 
 DL techniques are increasingly being employed for automatically assessing contours, with recent work exploring deep active learning for OAR and an intelligent DSC threshold based quality control system. A secondary segmentation algorithm to help classify errors in the primary model has been developed with promising classification accuracy and recall. Studies implementing DL-based contour models for OARs have shown significant time savings while maintaining or improving contour quality. In one study, total contouring time was reduced by 76% with radiation oncologist revision time specifically reduced by 35% compared to traditional workflows. Novel approaches are being developed to not only detect but also correct contouring errors. An automated QA and adaptive optimization correction strategy has been proposed that can identify incorrect auto-contours, provide potential error reasons and locations through attention heat maps, and use vision-language representations with convex optimization algorithms to adaptively correct problematic contours.
+
+```{figure} images/1.3.2_motivatingDoseQA.png
+:width: 100%
+
+Motivating dosimetric QA: on the left: 3D slice plane and mask visualization for OARs and TV (in green) overlaid on T1c image data. On the right, the same overlaid on the dose distribution: hotter regions indicate higher dose, where accuracy of contours is arguably more important.
+```
 
 In summary, there is an unmet clinical need for developing dosimetric tools for contour QA to streamline the workflow and provide fast and reliable feedback to clinicians. However, external validation of these QA approaches is essential before deployment to clinics with different patient populations and clinical practices. Automated approaches to contour review can decrease review time and improve consistency, making them valuable tools either on their own or as assistants to human reviewers in identifying poor-quality contours. The increasing adoption of AI tools in clinical practice has shifted the workflow paradigm. While auto-contouring is gradually replacing manual contouring in routine practice, quality checks still rely on clinicians, and reviewing them in a dose-aware manner is gaining importance.
 
@@ -208,4 +244,10 @@ Based on better clinical understanding and technical investigations, the final p
 
 The remainder of this thesis is structured as follows: Chapter 2 provides a background in AI and the RT workflow, which is followed by the research contributions that address the hypothesis and questions raised in this chapter. Chapter 12 revisits these questions and the hypothesis through a critical lens to include limitations of these studies. Finally, Chapter 13 provides some perspectives on future research in this domain. The topics are organized along validation of clinical needs (Part One), technical investigations and analysis (Part Two) and proofs of concept experiments (Part Three).
 
-Each of these is also plotted along the Technology Readiness Level (TRL) scale, as defined in the National Aeronautics and Space Administration (NASA) [guideline](https://www.nasa.gov/directorates/somd/space-communications-navigation-program/technology-readiness-levels/), through a research to innovation pipeline, including a proposed structure to read the subsequent chapters.
+```{figure} images/1.4.2_structure_of_thesis.png
+:width: 100%
+
+A proposed reading guide, organized into clinical, technical and proofs of concept buckets on the vertical axis, and the expected technology readiness level on the horizontal axis. The research to innovation pipeline aims to move the proofs of concept higher along the Technology Readiness Level (TRL) axis.
+```
+
+Each of these is also plotted along the TRL scale, as defined in the National Aeronautics and Space Administration (NASA) [guideline](https://www.nasa.gov/directorates/somd/space-communications-navigation-program/technology-readiness-levels/), through a research to innovation pipeline, including a proposed structure to read the subsequent chapters.

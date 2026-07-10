@@ -1,8 +1,8 @@
 # Do We Really Need that Skip-Connection? Understanding Its Interplay with Task Complexity
 
-This is a WIP (Work-In-Progress): this message will be removed once sufficient progress has been made. 
+**Read the paper:** [Publisher (Springer / MICCAI 2023)](https://doi.org/10.1007/978-3-031-43901-8_29) · [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=clej42kAAAAJ&citation_for_view=clej42kAAAAJ:35N4QoGY0k4C)
 
-#[![2 minute video abstract](https://img.youtube.com/vi/YreG6vC64aw/0.jpg)](https://www.youtube.com/watch?v=YreG6vC64aw)
+[![2 minute video abstract](https://img.youtube.com/vi/YreG6vC64aw/0.jpg)](https://www.youtube.com/watch?v=YreG6vC64aw)
 
 (click on the picture above to watch a 2 minute video abstract describing this research)
 
@@ -12,7 +12,7 @@ In this study we analyzed these questions using three variants of the UNet archi
 
 Using this scheme, our findings suggest that the benefit of employing skip-connections is small for low-to-medium complexity tasks, and its benefit appear only when the task complexity becomes large. We report that such incremental benefit is non-linear, with the Attention-Gated UNet yielding larger improvements. Furthermore, we find that these benefits also bring along robustness degradations on clinical data sets, particularly in out-of-domain scenarios. These results suggest a dependency between task complexity and the choice/design of noise-resilient skip-connections, indicating the need for careful consideration while using these skip-connections.
 
-#See [the project repository](https://github.com/amithjkamath/to_skip_or_not) to reproduce these results.
+See [the project repository](https://github.com/amithjkamath/to_skip_or_not) to reproduce these results.
 
 ## Citation
 

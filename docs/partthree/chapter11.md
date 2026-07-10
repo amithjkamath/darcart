@@ -1,6 +1,6 @@
 # How do 3D image segmentation networks behave across the context versus foreground ratio trade-off?
 
-This is a WIP (Work-In-Progress): this message will be removed once sufficient progress has been made. 
+**Read the paper:** [Publisher (Medical Imaging meets NeurIPS 2022)](http://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/72.pdf) · [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=clej42kAAAAJ&citation_for_view=clej42kAAAAJ:blknAaTinKkC)
 
 Modern 3D medical image segmentation is typically done using a sliding window approach due to GPU memory constraints. However, this presents an interesting trade-off between the amount of global context the network sees at once, versus the proportion of foreground voxels available in each training sample. It is known already that Unets perform worse with low global context, but enlarging the context comes at the cost of heavy class imbalance between background (typically very large) and foreground (much smaller) while training. 
 

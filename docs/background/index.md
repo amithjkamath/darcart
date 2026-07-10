@@ -8,6 +8,12 @@ This chapter serves as the background by describing the Radiotherapy (RT) workfl
 
 ## The Radiotherapy Workflow
 
+```{figure} images/2.1.1_rt_workflow.png
+:width: 100%
+
+The seven stages of the RT workflow. Figure generated using napkin.ai
+```
+
 The RT workflow, includes seven key stages designed to ensure safe and effective treatment. After initial consultation and consent, the process begins with simulation, where a planning Computed Tomography (CT) volume is acquired using immobilization devices to maintain consistent positioning. While CT is the standard for planning, additional imaging such as Magnetic Resonance Imaging (MRI) or Positron Emission Tomography (PET) may be registered with the planning CT to improve target definition. Next is contouring, where radiation oncologists outline the Target Volume (TV) and Organ at Risk (OAR). In the planning phase, dosimetrists or physicists define beam parameters such as energy, intensity, and angle, using Multi Criteria Optimization (MCO) to maximize tumour coverage while sparing healthy tissue. The plan then undergoes QA to confirm its accuracy and adaptability to anatomical changes. Treatment is delivered in multiple sessions, with image guidance used to align the patient before each fraction. The workflow ends with patient discharge and long-term follow-up to monitor outcomes and late effects.The entire process from simulation to first treatment can take several days to weeks depending on the complexity of treatment, pointing to the need for more efficient workflows. Each step in the process is elaborated upon next.
 
 ### Steps in Current Workflow
@@ -66,6 +72,12 @@ The modern field of AI has its roots in the 1950s, though related ideas existed 
 
 The field of AI is typically divided into several learning paradigms, as shown in Figure..
 
+```{figure} images/2.1.1_mltypes.png
+:width: 100%
+
+Categories of machine learning: Supervised learning: training process is shown above and prediction process is shown below. Unsupervised learning: the main two applications, embedding and clustering. Reinforcement learning: learn from environment and update from feedback. Self-supervised learning: a pretext task in self-supervised learning is a task designed to train a neural network to learn useful representations of input data without explicit supervision. The network is trained to solve the pretext task using the input data as the only source of supervision, and the learned representations can be transferred to downstream tasks where explicit supervision is available.
+```
+
 **Supervised Learning** uses labelled data to train models. Each input has a known output, and the model learns to match inputs to outputs by reducing the error between its predictions and the true labels. This method is useful in radiation oncology for tasks like tumour classification, where past cases with confirmed diagnoses can be used for training. The success of supervised learning depends on both the quality and quantity of the labelled data. In medicine, creating these labels often needs expert input, which takes time and can be costly. In radiation oncology, inter-expert variability in tasks like contouring can lead to inconsistent training data. Common tasks include *classification* (e.g., identifying cancerous tissue) and *regression* (e.g., predicting radiation dose).
 
 **Unsupervised Learning** works with unlabelled data. It finds patterns or groups in the data without knowing the correct outputs. One main method is *clustering*, where similar data points are grouped based on distance or similarity. In radiation oncology, clustering can help identify patient groups with similar treatment responses or uncover trends in treatment plans. *Dimensionality reduction* techniques like Principal Components Analysis (PCA) and t-SNE help simplify complex data and make it easier to understand. These are useful for visualizing the high-dimensional data common in radiation planning. Unsupervised methods can also detect outliers, which may indicate rare anatomy, equipment errors, or issues in treatment plans.
@@ -105,6 +117,12 @@ Modern DL models often use a modular design. A "backbone" network extracts gener
 
 **Architectural Innovations:** The development of DL architectures has transformed computer vision, evolving from general classifiers to specialized segmentation models. Before this shift, segmentation relied on edge- or region-based methods. Early CNNs like AlexNet, VGG-16, GoogLeNet, and ResNet introduced key components later reused in segmentation networks. A major breakthrough came with Fully Convolutional Network (FCN), which enabled end-to-end pixel-level predictions by removing fully connected layers. This approach adapted classification networks for segmentation through fine-tuning and influenced many later methods.
 
+```{figure} images/2.1.2_evolution_architectures.png
+:width: 100%
+
+Evolution of DL architectures for image segmentation: from FCNs to transformer based models and multi-modal architectures. Figure generated using napkin.ai
+```
+
 Encoder-decoder architectures, such as U-Net and SegNet, became widely used for their ability to combine contextual understanding with precise localization. U-Net, in particular, proved effective in medical imaging with limited data. Dilated convolution networks like DeepLab expanded the receptive field without increasing parameters and introduced techniques such as Atrous Spatial Pyramid Pooling (ASPP) and Continuous Random Field (CRF)s for better boundary detection. Other models, including deconvolution networks and large-kernel approaches, further improved segmentation detail and performance. Instance segmentation progressed through top-down methods like Mask R-CNN and bottom-up approaches like Deep Watershed Transform.
 
 *Attention mechanisms* improved global context modelling. Architectures such as Attention Gated U-Net (AGU-Net) enhanced U-Net by highlighting important regions, aiding detection of small or subtle structures. Transformers, introduced through Vision Transformer (ViT), were later adapted for segmentation with models like SegFormer, TransUNet, and U-Net + Transformer Hybrid (UNETR), offering strong performance in complex medical tasks. Hybrid CNN-Transformer models, including Swin U-Net and CoTr, combined local feature extraction with global attention, proving effective for 3D data. 3D and multimodal fusion architectures like nnU-Net and V-Net are now standard in volumetric segmentation tasks using MRI and CT, often incorporating multi-modal inputs for better accuracy.
@@ -112,6 +130,12 @@ Encoder-decoder architectures, such as U-Net and SegNet, became widely used for 
 Modern segmentation models deliver high accuracy and efficiency, turning segmentation into a robust, end-to-end process with wide applications.
 
 **U-Net Architecture:** U-Net, introduced by Ronneberger et al. in 2015, is a widely used architecture for semantic segmentation, especially in medical imaging. It features a symmetric encoder-decoder design, with skip connections that link encoder and decoder layers to retain spatial details lost during downsampling. These connections also help with gradient flow and improve training stability. Originally developed for biomedical images, U-Net showed strong performance with limited training data, aided by extensive data augmentation. It is efficient, segmenting high-resolution images in under a second on modern GPUs, and has become a standard in many domains.
+
+```{figure} images/2.2.1_unet_evolution.png
+:width: 100%
+
+The U-Net architecture has evolved several variations based on backbone, skip-connection, and data-flow enhancements. Figure generated using napkin.ai
+```
 
 3D U-Net extends this approach to volumetric data by using 3D operations and online elastic deformations for augmentation. Variants like U-Net with multiple skip-connections (UNet++) improve feature alignment between encoder and decoder paths using nested skip connections. U-Net has also been adapted to use different encoder backbones, such as ResNet, to leverage transfer learning. Lightweight versions reduce computation by using fewer layers and simpler upsampling, though often at the cost of detail around object boundaries.
 
@@ -206,6 +230,12 @@ Performance evaluation must be tailored to the specific nature of the predictive
 
 For classification tasks, the following metrics are commonly used:
 
+```{figure} images/2.4.1_classification_metrics.png
+:width: 100%
+
+Visualization of typical classification metrics in a binary scenario. Figure adapted and modified from [Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall).
+```
+
 - **Accuracy**:
 
 $$
@@ -245,6 +275,12 @@ The AUC-ROC (Area Under the Receiver Operating Characteristic Curve) quantifies 
 
 In segmentation tasks, especially those used in RT for delineating OAR and TV, voxel-wise classification metrics are often insufficient. Instead, spatial agreement metrics are employed to assess the geometric concordance of predicted contours to ground truth annotations.
 
+```{figure} images/2.4.2_segmentation_metrics.png
+:width: 100%
+
+Visualization of the two types of segmentation metrics: overlap based (DSC) and distance based (Hausdorff Distance (HD)). Surface DSC is a variation of DSC only on the borders, and Average Symmetric Surface Distance (ASSD) is a variation of HD.
+```
+
 - **Dice Similarity Coefficient**:
 
 $$
@@ -259,9 +295,9 @@ $$
 \text{HD}(A, B) = \max\left\{\sup_{a \in A} \inf_{b \in B} d(a, b), \sup_{b \in B} \inf_{a \in A} d(b, a)\right\}
 $$
 
-The Hausdorff Distance (HD) measures the largest boundary deviation between two contours. It highlights worst-case errors, which are critical in high-precision applications like stereotactic radiotherapy.
+The HD measures the largest boundary deviation between two contours. It highlights worst-case errors, which are critical in high-precision applications like stereotactic radiotherapy.
 
-- **Average Symmetric Surface Distance (ASSD)**:
+- **ASSD**:
 
 $$
 \text{ASSD}(A, B) = \frac{1}{|A| + |B|} \left(\sum_{a \in A} \min_{b \in B} d(a,b) + \sum_{b \in B} \min_{a \in A} d(b,a) \right)
@@ -275,6 +311,12 @@ A variant of DSC computed on the surface voxels within a tolerance (e.g., 1–2 
 ### Radiation Oncology-specific Metrics
 
 In RT, evaluation must extend beyond geometric accuracy to include dose distribution and biological impact. Dose distributions are measured typically using a DVH.
+
+```{figure} images/2.4.3_dosimetric_metrics.png
+:width: 100%
+
+Typical DVH curves: representing 3D doses in a 2D histogram, where percentage of volume receiving levels of doses up to the prescribed treatment dosage is plotted.
+```
 
 It is a two dimensional graph that shows how much radiation dose is received by different volumes of tissue (both tumour TV and OARs). The x-axis represents the radiation dose (in Gray), and the y-axis shows the percentage of the tissue volume receiving at least that dose. By analysing the DVH, clinicians can assess whether a treatment plan is safe and effective. The following domain-specific metrics, some of which are based on points on the DVH plane are used to assess treatment planning and dose prediction quality:
 
