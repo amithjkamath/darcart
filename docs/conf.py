@@ -3,7 +3,7 @@
 # -- Project information
 
 project = "DARCART"
-copyright = "2025, Amith Kamath"
+copyright = "2025-2026, Amith Kamath"
 author = "Amith Kamath"
 
 release = "0.1"
@@ -53,6 +53,11 @@ html_theme_options = {
     "navigation_depth": 4,  # Depth of nested TOC items
     "show_nav_level": 2,  # Show top-level items expanded
     "collapse_navigation": True,  # Collapse subsections by default
+    "extra_footer": (
+        '<div>This work is licensed under '
+        '<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">'
+        'CC BY-NC-ND 4.0</a>.</div>'
+    ),
 }
 
 # -- Options for EPUB output

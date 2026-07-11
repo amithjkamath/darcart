@@ -1,7 +1,5 @@
 # Dosimetric Awareness of Radiation Oncology Professionals
 
-this is a WIP.
-
 ## 3: Predicting the Impact of Target Volume Contouring Variations on the Organ at Risk Dose: Results of a Qualitative Survey
 
 This work was [published](https://doi.org/10.1016/j.radonc.2025.110999) in [Radiotherapy and Oncology](https://www.thegreenjournal.com/) (the "Green Journal"). More details about this work is included in [Chapter 3](chapter3.md).
