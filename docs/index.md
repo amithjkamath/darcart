@@ -16,6 +16,22 @@ The work is organized by theme, in three parts:
 - **[Part Two — Sensitivity of Dose Prediction Models (Chapters 6–8)](parttwo/index.md)** examines whether the underlying dose predictors are accurate, sensitive to realistic contour variation, robust to unusual cases, and fast enough for review, then turns that sensitivity into *ASTRA*.
 - **[Part Three — Robustness of Segmentation Models (Chapters 9–11)](partthree/index.md)** studies how U-Net design and data choices — including skip connections, task complexity, texture, context, and foreground ratio — affect robustness under distribution shift.
 
+## From the thesis to the ongoing research program
+
+The thesis is the completed foundation; my current work continues its questions along three connected axes:
+
+1. **[Robust segmentation models](https://amithjkamath.github.io/projects/Theme-Robustness/)** extend Part Three from controlled architecture studies toward models that remain dependable across scanners, protocols, institutions, anatomies, and image quality.
+2. **[Personalized contour review and correction](https://amithjkamath.github.io/projects/Theme-Correction/)** extend Parts One and Two from expert disagreement, automated assessment, and sensitivity mapping toward models that represent multiple plausible contours and workflows that help clinicians resolve consequential differences efficiently.
+3. **[Fast and sensitive dose prediction](https://amithjkamath.github.io/projects/Theme-Dose-Proposal/)** extends Part Two toward rapid treatment planning and evaluation across tumour sites, institutions, planning systems, and contour alternatives.
+
+The axes are coupled rather than sequential:
+
+- robustness seeks invariance to irrelevant acquisition and deployment variation;
+- personalized correction preserves meaningful patient, observer, and treatment-context variation while helping clinicians act on the alternatives and uncertainty that remain; and
+- dose prediction provides a fast treatment-aware signal for comparing those alternatives and guiding review.
+
+The evolving theme pages above describe ongoing work, while this site remains the detailed record of the thesis studies. The [publications page](https://amithjkamath.github.io/publications/) is the compact map from each axis to its supporting papers and project pages.
+
 New readers may want to start with the [Introduction](intro/index.md) for the clinical motivation, or the [Background](background/index.md) for a primer on the radiotherapy workflow and the AI methods used throughout. The [Conclusions](conclusions/index.md) revisit the central hypothesis across all three parts, and every claim is backed by a linked [reference](references/index.md).
 
 ```{toctree}

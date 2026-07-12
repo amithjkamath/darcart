@@ -12,6 +12,8 @@ This work was presented as a [poster](https://ieeexplore.ieee.org/stamp/stamp.js
 
 This work was presented as an [oral talk](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10341062) at [EMBC 2023](https://embc.embs.org/2023/). This work won the [2nd best student paper award](https://embc.embs.org/2023/students/paper-competition/finalists/) at this conference.
 
+**Ongoing connection:** These studies are the foundation of the [fast and sensitive dose-prediction axis](https://amithjkamath.github.io/projects/Theme-Dose-Proposal/) and provide the treatment-aware signal used in [personalized contour review and correction](https://amithjkamath.github.io/projects/Theme-Correction/).
+
 ```{toctree}
 :maxdepth: 2
 :caption: Contents

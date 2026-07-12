@@ -12,6 +12,8 @@ This work was presented as a [poster](https://link.springer.com/chapter/10.1007/
 
 This work was presented as a [poster](https://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/72.pdf) at [Medical Imaging meets NeurIPS 2022](https://sites.google.com/view/med-neurips-2022/home).
 
+**Ongoing connection:** These architecture studies continue as a broader [robust-segmentation program](https://amithjkamath.github.io/projects/Theme-Robustness/) and inform [personalized contour models](https://amithjkamath.github.io/projects/Theme-Correction/) whose output diversity should reflect genuine ambiguity rather than instability.
+
 ```{toctree}
 :maxdepth: 2
 :caption: Contents

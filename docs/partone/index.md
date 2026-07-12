@@ -12,6 +12,8 @@ This work was presented as an [oral talk](https://proceedings.mlr.press/v250/kam
 
 This work was presented as an [oral talk](https://link.springer.com/chapter/10.1007/978-3-031-73376-5_21) at the [CaPTion Workshop at MICCAI 2024](https://caption-workshop.github.io/#Workshop%20sessions). More details about this work is included in [Chapter 5](chapter5.md).
 
+**Ongoing connection:** These studies motivate [personalized contour review and correction](https://amithjkamath.github.io/projects/Theme-Correction/), combining models that represent observer variability with workflows that help clinicians resolve consequential differences.
+
 
 ```{toctree}
 :maxdepth: 2
