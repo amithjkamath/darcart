@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = "DARCART"
+project = "Dose-Aware and Robust Contour QA for Radiotherapy"
 copyright = "2025-2026, Amith Kamath"
 author = "Amith Kamath"
 

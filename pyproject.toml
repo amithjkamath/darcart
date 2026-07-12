@@ -3,6 +3,6 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "tara"
+name = "dose-aware-contour-qa"
 authors = [{name = "Amith Kamath", email = "amithjkamath@outlook"}]
 dynamic = ["version", "description"]

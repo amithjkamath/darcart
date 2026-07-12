@@ -1,3 +1,3 @@
-# Dose-Aware and Robust Contour Assessment for RT
+# Dose-Aware and Robust Contour QA for Radiotherapy
 
-Current state of this work should be available [here](https://amithjkamath.github.io/darcart/).
+Read the thesis and supporting research at [amithjkamath.github.io/dose-aware-contour-qa](https://amithjkamath.github.io/dose-aware-contour-qa/).

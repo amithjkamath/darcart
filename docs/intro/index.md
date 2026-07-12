@@ -4,7 +4,7 @@
 
 — Carl Sagan, in Cosmos (Chapter 12), 1980.
 
-This chapter starts with the clinical background, followed by the challenges in the treatment process. Next, it discusses the unmet clinical needs, and ends with the research hypothesis and the structure of the thesis. New terms are explained in Chapter 2, which readers may skip to go directly to the clinical needs in Part One, technical contributions in Part Two, and proof-of-concept experiments in Part Three.
+This chapter starts with the clinical background, followed by the challenges in the treatment process. Next, it discusses the unmet clinical needs, and ends with the research hypothesis and the structure of the thesis. Chapter 2 explains the radiotherapy workflow and the AI concepts used throughout. The research chapters then proceed by theme: dosimetric awareness and clinical need in Part One, the sensitivity of dose-prediction models in Part Two, and the robustness of segmentation models in Part Three.
 
 ## Clinical Background
 
@@ -181,73 +181,79 @@ In summary, there is an unmet clinical need for developing dosimetric tools for 
 
 ## Hypothesis, Contributions, and Structure
 
-This work progresses from understanding human limitations in dosimetric interpretation, validating the reliability of dose distribution predictions under realistic variability, investigating the performance of underlying DL architectures across task complexities, and finally, to building proofs-of-concept form a comprehensive approach to achieving faster, clinically meaningful, and scalable QA.
+This work progresses from establishing the limitations of human dosimetric judgement to testing automated dose-aware assessment and ranking. It then examines whether the dose-prediction models that enable such assessment are sufficiently sensitive and robust, before investigating the robustness of the segmentation architectures on which auto-contouring and dose prediction depend. The two proof-of-concept tools are placed alongside the evidence from which they arise: AutoDoseRank in Part One and ASTRA in Part Two.
 
 ### Hypothesis and Aims
 
-This leads to the central hypothesis of this work, that:
+This leads to the central hypothesis of this work:
 
-> *AI-based systems can standardize and automate fast and reliable dosimetric contour QA in RT planning.* 
+> *Fast, dose-aware AI systems can make contour QA in RT planning more consistent and clinically meaningful, provided that their dose-prediction and segmentation components are sensitive to consequential contour variations and robust to distribution shifts.*
 
-They are organized into research questions in three pillars:
+The hypothesis is examined through three groups of research questions that match the three parts of this site:
 
-**A: Clinical Understanding and Needs Validation**: Is there a need to standardize and automate dosimetric contour QA? with the sub-questions:
+**A: Dosimetric Awareness of Radiation Oncology Professionals:** Is dose-aware automation needed, and can it improve contour assessment?
 
-**A1:** What is the variability amongst radiation oncology professionals while performing contour quality assessments?
+**A1:** How consistently can radiation oncology professionals estimate the dosimetric impact of contour variations?
 
-**A2:** How can dosimetric criteria be systematically formulated to develop an automated systems to replicate their behaviour?
+**A2:** Can a deep-learning dose predictor identify dosimetrically sub-optimal contours as well as, or better than, expert reviewers?
 
-If the answers to the group of questions in **A** indicates a clinical need, then, we investigate the following:
+**A3:** Can clinical dose criteria and organ-at-risk priorities be used to rank candidate auto-contours by dosimetric quality?
 
-**B: Technical Investigations and Analysis:** How reliable and fast are AI-based systems for dosimetric contour QA? involving the following sub-questions:
+**B: Sensitivity of Dose Prediction Models:** Are dose-prediction models suitable for contour QA?
 
-**B1:** Do the predicted doses correlate better with the true dose differences compared to geometric metrics?
+**B1:** Are their predictions accurate, fast, sensitive to realistic contour variations, and robust to out-of-distribution cases?
 
-**B2:** How reliable are the core DL architectures under difficult conditions?
+**B2:** Can their local sensitivity be converted into maps that focus review on the contour locations with the greatest dosimetric impact?
 
-These explorations then lead to the following two proofs of concept.
+**C: Robustness of Segmentation Models:** How do model and data choices affect the reliability of the segmentation components used in this workflow?
 
-**C: Proofs of Concept Studies:** What clinical systems can such dosimetric contour QA be integrated into?
+**C1:** How do U-Net architecture choices, especially skip connections, interact with task complexity and robustness under texture shifts?
 
-**C1:** Can such models assist in focusing contour review efforts on locations where segmentation variations are dosimetrically most critical?
-
-**C2:** Can such models assist in dosimetrically ranking various auto-contour proposals?
+**C2:** How does the trade-off between image context and foreground ratio affect the performance and robustness of 3D segmentation networks?
 
 This hypothesis and related questions are addressed in the following structure.
 
 ### Research Contributions
 
-The subsequent chapters begin by quantifying the gap between expert perception and dosimetric reality, establishing the need for this automation. It then leverages dose prediction models to fill the void of models that reliably automate dosimetric QA. From there, it explores how sensitive these models are to real-world input variations, providing evidence for their integration into planning workflows. Finally, the robustness of the segmentation architectures themselves is critically examined to ensure consistent performance under distribution shifts. This three-part structure allows the thesis to systematically build and validate a case for practical, AI-assisted QA in RT. The research contributions related to this is included in Section.
+The subsequent chapters first quantify the gap between expert perception and dosimetric reality, then test automated assessment and ranking. They next evaluate dose predictors under realistic input variation and translate their sensitivity into a localized review tool. Finally, they examine how segmentation architecture and input sampling affect robustness. This three-part structure builds the case for practical AI-assisted contour QA while making the dependencies and limitations of the proposed workflow explicit.
 
-**Clinical Understanding and Needs Validation:**
-This pillar advocates for shifting QA from purely geometric to clinically meaningful dosimetric evaluations. The field has long relied on geometric metrics (e.g., DSC) for segmentation evaluation, yet these do not always correlate with clinical outcomes {cite}`Poel_2021_predictive`. By embedding dose-awareness into contouring workflows, these works significantly improve the efficiency and safety of RT planning. The research contributions in this part include:
+**Part One — Dosimetric Awareness of Radiation Oncology Professionals:**
+This part motivates a shift from purely geometric to clinically meaningful dosimetric evaluation. The field has long relied on geometric metrics such as DSC for segmentation evaluation, yet these do not always correlate with clinical outcomes {cite}`Poel_2021_predictive`. The contributions are:
 
-- Chapter 3 addresses **A1** and measures the *inter-expert variability in estimating the dosimetric impact* of TV contour changes on OAR toxicity through structured interviews across seven clinical experts. This work will appear in Radiotherapy and Oncology, mid-2025.
+- Chapter 3 addresses **A1** by measuring *inter-expert variability in estimating the dosimetric impact* of TV contour changes through a survey of seven clinical experts. This work was published in *Radiotherapy and Oncology* in 2025.
 
-- Chapters 7 and 4 address **A2** and experimentally demonstrates that DL-based *dose predictors surpass human experts* in detecting dosimetrically sub-optimal contours, marking the first step towards automated dose-aware QA. Chapter 7 was presented at International Symposium for Biomedical Imaging (ISBI), 2023 and Chapter 4 was accepted as an oral talk (18% selection rate) at Medical Imaging with Deep Learning (MIDL) 2024.
+- Chapter 4 addresses **A2** through a head-to-head comparison showing that a DL dose predictor can *outperform radiation oncologists* in detecting dosimetrically sub-optimal contours. This work was presented as an oral talk at Medical Imaging with Deep Learning (MIDL) 2024.
 
-**Technical Investigations and Analysis:**
-After validating the clinical need, this pillar analyses the behaviour of AI-based models to address the unmet needs discovered in the previous part. It shows that dose prediction models, while highly effective {cite}`Liu_2021_Technical`, require careful validation for robustness and sensitivity. Recognizing that U-Net based architectures are ubiquitous {cite}`Azad_2022_Medical` in both auto-contouring and dose prediction model infrastructure, it shows a nuanced understanding of design choices relative to the complexity of data, guiding future architecture development with robustness in mind. The contributions include:
+- Chapter 5 addresses **A3** with *AutoDoseRank*, a dosimetry-informed framework that ranks TV contour candidates using dose constraints and clinical priorities. It outperformed three of four radiation oncologists in the reported triage task and was presented at the CaPTion workshop at MICCAI 2024.
 
-- Chapter 6 extends the work in Chapter 7 and addresses **B1**, providing an extensive *evaluation of sensitivity to OAR contour variations and robustness* against out-of-distribution cases, proposing data augmentation strategies to mitigate sensitivity gaps. They demonstrate that *model predictions align closely with inter-expert variability* in dose distribution, establishing strong evidence of model sensitivity. This work was published in Cancers, 2023.
+**Part Two — Sensitivity of Dose Prediction Models:**
+After establishing the clinical need, this part examines the dose-prediction models used for automated dosimetric assessment. Such models can predict dose distributions rapidly {cite}`Liu_2021_Technical`, but their sensitivity and robustness must be validated for QA. The contributions are:
 
-- Chapters 9 extends the analysis in Chapter 10 to address **B2**, and critically examine *skip-connections across task complexities*, finding that their benefits are non-linear and context-dependent. Importantly, it shows that severing skip-connections in low-complexity tasks improves robustness, especially in out-of-domain data. Chapter 11 further addresses **B2** and analyses how *patch size affects segmentation performance and robustness*, revealing that while larger context benefits performance, attention-based and transformer-based models (UNETR, AGU-Net) are more sensitive to foreground ratio shifts than vanilla U-Nets. Chapter 9 is under review. Chapter 10 was early-accepted as a conference paper at Medical Image Computing and Computer-Assisted Intervention (MICCAI) 2023. Chapter 11 was accepted as an abstract at the Medical Imaging meets Conference on Neural Information Processing Systems (NeurIPS) workshop in 2022.
+- Chapter 6 addresses **B1** with an extensive evaluation of sensitivity to OAR contour variations and robustness to out-of-distribution cases, including targeted data augmentation to mitigate observed failure modes. This journal study, published in *Cancers* in 2023, extends the conference work in Chapter 7.
 
-**Proofs of Concept Experiments:**
-Based on better clinical understanding and technical investigations, the final pillar of work groups proofs of concept experiments on novel tooling for dosimetric contour QA, for both the TV and OARs:
+- Chapter 7 also addresses **B1** by directly testing whether predicted dose changes track realistic inter-expert variation in OAR contours. This work was presented at the International Symposium on Biomedical Imaging (ISBI) 2023.
 
-- Chapter 8 addresses **C1** and introduces *Atomic Surface Transformations for Radiotherapy quality Assurance (ASTRA), a method to visualize sensitivity maps* showing where local contour variations on OARs impact dose predictions, enabling dose-aware contour corrections. This work won the 2nd best student paper award at Conference on Engineering in Medicine and Biology (EMBC) 2023.
+- Chapter 8 addresses **B2** and introduces *Atomic Surface Transformations for Radiotherapy Quality Assurance* (ASTRA), a method for visualizing where local OAR contour variations have the greatest impact on predicted dose. This work won the second-best student paper award at the Engineering in Medicine and Biology Conference (EMBC) 2023.
 
-- Chapter 5 addresses **C2** and develops a *dosimetry-informed ranking framework called AutoDoseRank* that sorts TV contour candidates based on their clinical impact, outperforming 3 of 4 expert oncologists in triage tasks. This work was presented at the CaPTion workshop at MICCAI 2024.
+**Part Three — Robustness of Segmentation Models:**
+The final part examines U-Net-based architectures, which are ubiquitous in auto-contouring and dose-prediction pipelines {cite}`Azad_2022_Medical`, and asks how architecture and data choices affect reliability. The contributions are:
+
+- Chapter 9 addresses **C1** by extending the Chapter 10 analysis across task complexities and texture variations. It finds that the value of skip connections is non-linear and context-dependent, and that more elaborate variants are not consistently more robust under distribution shift. This work was published in *Computers in Biology and Medicine* in 2025.
+
+- Chapter 10 provides the earlier conference study for **C1**, showing that skip connections offer their clearest benefit at high task complexity but can reduce robustness on out-of-domain clinical data. This work was presented at MICCAI 2023.
+
+- Chapter 11 addresses **C2** by examining the trade-off between global image context and foreground ratio in 3D segmentation. It finds that attention-based and Transformer-based models are more sensitive to foreground-ratio shifts than a vanilla U-Net. This work was presented at the Medical Imaging meets NeurIPS workshop in 2022.
 
 ### Thesis Structure
 
-The remainder of this thesis is structured as follows: Chapter 2 provides a background in AI and the RT workflow, which is followed by the research contributions that address the hypothesis and questions raised in this chapter. Chapter 12 revisits these questions and the hypothesis through a critical lens to include limitations of these studies. The topics are organized along validation of clinical needs (Part One), technical investigations and analysis (Part Two) and proofs of concept experiments (Part Three).
+The remainder of this thesis is structured as follows:
 
-```{figure} images/1.4.2_structure_of_thesis.png
-:width: 100%
+| Part | Chapters | Theme and progression |
+| --- | --- | --- |
+| Background | Chapter 2 | Radiotherapy workflow, AI methods, and evaluation metrics used in the research chapters. |
+| Part One | Chapters 3–5 | Establishes variability in expert judgement, compares experts with automated dose prediction, and applies the result in AutoDoseRank. |
+| Part Two | Chapters 6–8 | Tests dose-prediction sensitivity and robustness, then applies local sensitivity in ASTRA. |
+| Part Three | Chapters 9–11 | Studies the robustness of segmentation architectures across skip-connection choices, task complexity, texture variation, context, and foreground ratio. |
+| Conclusions | Chapter 12 | Revisits the hypothesis, synthesizes the evidence, and discusses limitations and future validation. |
 
-A proposed reading guide, organized into clinical, technical and proofs of concept buckets on the vertical axis, and the expected technology readiness level on the horizontal axis. The research to innovation pipeline aims to move the proofs of concept higher along the Technology Readiness Level (TRL) axis.
-```
-
-Each of these is also plotted along the TRL scale, as defined in the National Aeronautics and Space Administration (NASA) [guideline](https://www.nasa.gov/directorates/somd/space-communications-navigation-program/technology-readiness-levels/), through a research to innovation pipeline, including a proposed structure to read the subsequent chapters.
+This organization is thematic rather than a strict technology-readiness sequence. In particular, the proof-of-concept systems are integrated into the parts that establish their foundations: AutoDoseRank follows the clinical-awareness studies in Chapter 5, while ASTRA follows the dose-sensitivity studies in Chapter 8.

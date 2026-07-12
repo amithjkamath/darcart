@@ -6,7 +6,7 @@
 
 This work set out to test a single central hypothesis:
 
-> *AI-based systems can standardize and automate fast and reliable dosimetric contour quality assurance (QA) in radiotherapy planning.*
+> *Fast, dose-aware AI systems can make contour quality assurance (QA) in radiotherapy planning more consistent and clinically meaningful, provided that their dose-prediction and segmentation components are sensitive to consequential contour variations and robust to distribution shifts.*
 
 The chapters that precede this one build the case for that hypothesis in three parts, organized by theme rather than by technology-readiness level. [Part One](../partone/index.md) asks whether there is a real clinical need for dose-aware contour QA and shows how far automated dose prediction can already go towards meeting it. [Part Two](../parttwo/index.md) examines whether the dose-prediction models at the heart of this idea are fast, sensitive, and robust enough to be trusted, and turns that insight into a concrete review tool. [Part Three](../partthree/index.md) looks underneath these models at the segmentation architectures they depend on, and asks how robust those architectures really are.
 
